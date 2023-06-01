@@ -1,0 +1,231 @@
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  cat /etc/os-release
+    4  sudo apt install curl
+    5  cd
+    6  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+    7  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    8  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    9  exec $SHELL
+   10  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   11  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+   12  exec $SHELL
+   13  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   14  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+   15  rbenv install 3.2.0
+   16  rbenv global 3.2.0
+   17  nano .bashrc
+   18  cd
+   19  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+   20  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+   21  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+   22  exec $SHELL
+   23  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   24  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+   25  exec $SHELL
+   26  sudo apt install rbenv
+   27  rbenv install 3.2.0
+   28  rbenv global 3.2.0
+   29  rbenv install 3.2.0
+   30  exec $SHELL
+   31  rbenv
+   32  rbenv -v
+   33  rbenv install 3.2.0
+   34  rbenv install --list
+   35  rbenv install 3.0.2
+   36  rbenv install 3.0.0
+   37  rbenv install 3.0.1
+   38  rbenv install 2.6.5
+   39  ruby -v
+   40  gem install bundler
+   41  sudo apt-get remove rbenv 
+   42  nano .bashrc 
+   43  wget https://gist.github.com/alexishida/655fb139c759393ae5fe47dacd163f99#file-rbenv-ruby-rails-install-sh
+   44  ls
+   45  chmod 777 655fb139c759393ae5fe47dacd163f99
+   46  wget https://gist.githubusercontent.com/alexishida/655fb139c759393ae5fe47dacd163f99/raw/5164d772dfb5070372ddc96e45eb9383f39ced83/rbenv-ruby-rails-install.sh
+   47  ls
+   48  chmod 777 rbenv-ruby-rails-install.sh
+   49  ls
+   50  ./rbenv-ruby-rails-install.sh
+   51  sudo ./rbenv-ruby-rails-install.sh
+   52  rbenv -v
+   53  ruby -v
+   54  rbenv --version
+   55  rails new gil
+   56  cd gil/
+   57  bundle
+   58  cd gil/
+   59  code .
+   60  cd
+   61  curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+   62  git config --global color.ui true
+   63  git config --global user.name "Thalescantai"
+   64  git config --global user.name "59291117668"
+   65  git config --global user.email "giljr@sefin.ro.gov.br"
+   66  ssh-keygen -t rsa -b 4096 -C "giljr@sefin.ro.gov.br"
+   67  cat ~/.ssh/id_rsa.pub
+   68  sudo apt-get install libaio1 unzip
+   69  sudo mkdir /opt/oracle
+   70  naultilus .
+   71  ls
+   72  cd /opt/oracle/
+   73  ls
+   74  sudo mv /home/gilberto/Documents/instantclient /opt/oracle/
+   75  sudo mv /home/gilberto/Documents/instantclient_21_9 /opt/oracle/
+   76  ls
+   77  cd instantclient_21_9/
+   78  ln -s libclntsh.so.19.1 libclntsh.so
+   79  ln -s libocci.so.19.1 libocci.so
+   80  ln -s /opt/oracle/instantclient_21_9 /opt/oracle/instantclient
+   81  sudo ln -s /opt/oracle/instantclient_21_9 /opt/oracle/instantclient
+   82  sudo sh -c "echo /opt/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf"
+   83  sudo ldconfig
+   84  export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH
+   85  export PATH=/opt/oracle/instantclient:$PATH
+   86  nano .bashrc
+   87  rails new projeto -d oracle
+   88  cd projeto/
+   89  code .
+   90  cd
+   91  git config --global color.ui true
+   92  git config --global user.name "59291117668"
+   93  git config --global user.email "giljr@sefin.ro.gov.br"
+   94  ssh-keygen -t rsa -b 4096 -C "giljr@sefin.ro.gov.br"
+   95  cat ~/.ssh/id_rsa.pub
+   96  git clone git@git.sefin.ro.gov.br:ipva/ipva-api.git
+   97  ls
+   98  cd projeto/
+   99  ls
+  100  c
+  101  cd
+  102  rm -rf projeto/
+  103  mkdir projeto
+  104  cd projeto/
+  105  git clone git@git.sefin.ro.gov.br:ipva/ipva-api.git
+  106  git config --global color.ui true
+  107  git config --global user.name "59291117668"
+  108  git config --global user.email "giljr@sefin.ro.gov.br"
+  109  ssh-keygen -t rsa -b 4096 -C "giljr@sefin.ro.gov.br"
+  110  cat ~/.ssh/id_rsa.pub
+  111  rails s
+  112  rails s
+  113  cd projeto/
+  114  git clone git@git.sefin.ro.gov.br:ipva/ipva-api.git
+  115  ls
+  116  git clone git@git.sefin.ro.gov.br:web/sgi.git
+  117  history > setup_ubuntu_ruby.txt
+  118  ruby -v
+  119  raisl -v
+  120  rails -v
+  121  $setxkbmap -model abnt2 -layout br
+  122  setxkbmap -model abnt2 -layout br
+  123  ls
+  124  git tag -a v0.0 -m "Rubyonrails Bare Structure - version 0.0"
+  125  git push origin v0.0
+  126  rails g scaffold Contact name:string email:string birthdate:date
+  127  rails db:migrate
+  128  rails s
+  129  bundle install
+  130  rails g task dev setup
+  131  rails dev:setup
+  132  bundle update
+  133  rails dev:setup
+  134  rails c
+  135  rails dev:setup
+  136  rails c
+  137  rails s
+  138  rails -v
+  139  rails _5.0.1_ new notebook
+  140  rails new notebook
+  141  cd notebook/
+  142  code .
+  143  cd ..
+  144  cd rm -rf notebook/
+  145  rm -rf notebook/
+  146  ls
+  147  rails new notebook --api
+  148  cd notebook/
+  149  code .
+  150  naltilus .
+  151  cd ~/.asdf/
+  152  ll
+  153  cd bin
+  154  ll
+  155  cd ..
+  156  cd plugins/
+  157  ll
+  158  cd ruby/
+  159  ll
+  160  cd bin/
+  161  ll
+  162  cd ..
+  163  clear
+  164  ll
+  165  rails s
+  166  sudo apt-get remove rbenv 
+  167  sudo apt-get remove --auto-remove rbenv 
+  168  sudo apt-get purge rbenv 
+  169  sudo apt-get purge --auto-remove rbenv 
+  170  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+  171  sudo nano ~/.bashrc 
+  172  asdf install ruby 3.0.2
+  173  asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+  174  asdf install ruby 3.0.2
+  175  asdf install ruby 3.2.2
+  176  ruby -version
+  177  sudo apt autoremove -y
+  178  sudo apt-get autoclean
+  179  sudo apt-get --force-yes remove rbenv
+  180  sudo apt-get --allow remove rbenv
+  181  sudo dpkg -r rbenv
+  182  rbenv
+  183  sudo nano ~/.bashrc 
+  184  rbenv
+  185  asdf
+  186  ruby -version
+  187  asdf local ruby 3.0.2
+  188  ruby -version
+  189  ruby -v
+  190  rails s
+  191  cd ..
+  192  ruby -v
+  193  ll
+  194  cd ro
+  195  cd ror
+  196  cd Documents/ror
+  197  clear
+  198  asdf plugin add nodejs
+  199  asdf plugin add yarn
+  200  asdf install nodejs latest
+  201  asdf list
+  202  asdf isntall yarn latest
+  203  asdf install yarn latest
+  204  asdf list
+  205  asdf global yarn 1.22.19
+  206  asdf global nodejs 20.1.0
+  207  asdf global ruby 3.0.2
+  208  ruby -v
+  209  yarn -v
+  210  which ruby
+  211  which yarn
+  212  ls
+  213  gem install rails
+  214  rails new blog --css bootstrap
+  215  ll
+  216  cd ..
+  217  mkdir -p projects/ruby
+  218  cd projects/ruby/
+  219  rails new blog --css bootstrap
+  220  ll
+  221  cd blog/
+  222  ll
+  223  rails s
+  224  code .
+  225  rails s
+  226  gem install bundler
+  227  bundle install
+  228  bundle exec rails assets:precompile
+  229  bundle exec rails s -b 0.0.0.0
+  230  history
+  231  history >> history.txt
