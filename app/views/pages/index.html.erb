@@ -2,7 +2,10 @@
   <div class="jumbotron">
     <h1 class="display-4">Welcome to J3 Finance Tracker App!</h1>
     <p class="lead">This is a market-leading crypto portfolio, built to help you save money, plan for the future, and see all your investments in one place.</p>
+    <a class="btn btn-primary btn-lg" href="https://medium.com/jungletronics" role="button">visit jungletronics!</a><br>
     <hr class="my-4">
-    <a class="btn btn-primary btn-lg" href="https://medium.com/jungletronics" role="button">visit jungletronics!</a>
+    <%# <%= link_to :logout, destroy_user_session_path, :method => :delete %>
+    <%= button_to("Log Out",   destroy_user_session_path,   method: :delete ) %>
+    <a href="https://github.com/heartcombo/devise#controller-filters-and-helpers"> Reference: GitHub Page: heartcombo/devise</a>
   </div>
 </div>
