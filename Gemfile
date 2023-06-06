@@ -48,7 +48,14 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# https://github.com/heartcombo/devise
 gem "devise" 
+
+# https://github.com/hisea/devise-bootstrap-views
+# run :
+# bundle config set --local without 'production'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

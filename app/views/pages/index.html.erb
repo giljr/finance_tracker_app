@@ -4,8 +4,43 @@
     <p class="lead">This is a market-leading crypto portfolio, built to help you save money, plan for the future, and see all your investments in one place.</p>
     <a class="btn btn-primary btn-lg" href="https://medium.com/jungletronics" role="button">visit jungletronics!</a><br>
     <hr class="my-4">
-    <%# <%= link_to :logout, destroy_user_session_path, :method => :delete %>
+    <%= link_to :logout, destroy_user_session_path, data: { "turbo-method": :delete } %>
     <%= button_to("Log Out",   destroy_user_session_path,   method: :delete ) %>
-    <a href="https://github.com/heartcombo/devise#controller-filters-and-helpers"> Reference: GitHub Page: heartcombo/devise</a>
+    <hr>
+    <table>
+      <thead>
+        <tr>
+          <th>Material to Study</th>
+          <th>link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>My GitHub Repository Project Page: <strong>Finance Tracker App</strong></td>
+          <td>
+            <a href="https://github.com/giljr/finance_tracker_app" class="btn btn-light">Go To My GitHub Repo Page</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Devise Authentication GitHub Page: <strong>heartcombo/devise</strong></td>
+          <td>
+            <a href="https://github.com/heartcombo/devise#controller-filters-and-helpers" class="btn btn-light">Go To Devise GitHub Page</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Devise Bootstrap View Page: <strong>hisea/devise-bootstrap-views</strong></td>
+          <td>
+            <a href="https://github.com/hisea/devise-bootstrap-views/tree/master" class="btn btn-light">Go To Devise Boostrap View Page</a>
+          </td>
+        </tr>
+        <td>Mashrur Hossain Udemy Rails Course: <strong>finance-tracker-6</strong></td>
+        <td>
+          <a href="https://github.com/udemyrailscourse/finance-tracker-6" class="btn btn-light">Go To Mashrur Hossain Page</a>
+        </td>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
   </div>
 </div>
