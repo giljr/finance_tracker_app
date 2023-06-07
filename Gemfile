@@ -57,6 +57,10 @@ gem "devise"
 # bundle config set --local without 'production'
 gem 'devise-bootstrap-views', '~> 1.0'
 
+# A Ruby client for the The IEX Cloud API.0
+# https://github.com/dblock/iex-ruby-client
+gem 'iex-ruby-client'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
