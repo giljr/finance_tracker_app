@@ -1,0 +1,17 @@
+<h1 class = "pb-5">My Portfolio</h1>
+<h3>Search Stocks</h3>
+<%=form_tag search_stock_path, remote: true, method: :get do %>
+  <div class="form-group row">
+    <div class="col-sm-9 pe-0">
+      <%= text_field_tag :stock,params[:stock] , placeholder: 'Stock ticker symbol', autofocus:true, class:"form-control form-control-md" %>
+      <%# <input type="text" class="form-control" placeholder="Stock ticker symbol"> %>
+    </div>
+    <div class="col-sm-3 ps-0">
+      <%= button_tag type: :submit, class:"btn btn-primary" do %>
+        <% content_tag :strong, 'Search' %>
+      <% end %>
+      <%# <button type="submit" class="btn btn-primary">Search</button> %>
+    </div>
+  </div>
+<% end %>
+<%= render 'users/result' %>

@@ -10,6 +10,16 @@ class Stock < ApplicationRecord
             # https://stackoverflow.com/questions/59993437/can-i-generate-a-new-config-master-key-file
             endpoint: 'https://cloud.iexapis.com/v1'
           )
-        client.price(ticker_symbol)
+          begin
+            new(ticker:ticker_symbol, name:client.company(ticker_symbol).company_name, last_price:client.price(ticker_symbol))
+          rescue => exception
+            return nil            
+          end
+        # client.price(ticker_symbol)
+        #   new(ticker:ticker_symbol, name:client.company(ticker_symbol).company_name, last_price:client.price(ticker_symbol))
+
+
+        
+
     end
 end
