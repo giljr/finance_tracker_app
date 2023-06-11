@@ -7,7 +7,7 @@
       <%# <input type="text" class="form-control" placeholder="Stock ticker symbol"> %>
     </div>
     <div class="col-sm-3 ps-0">
-      <%= button_tag type: :submit, class:"btn btn-primary" do %>
+      <%= button_tag type="submit", class:"btn btn-primary" do %>
         <% content_tag :strong, 'Search' %>
       <% end %>
       <%# <button type="submit" class="btn btn-primary">Search</button> %>
@@ -15,3 +15,8 @@
   </div>
 <% end %>
 <%= render 'users/result' %>
+<div id="results">
+</div>
+<%# <% if !@tracked_stocks.empty? %>
+<%# <%= render 'stocks/list'%>
+<%# <% end %>
