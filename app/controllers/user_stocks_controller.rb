@@ -1,4 +1,5 @@
 class UserStocksController < ApplicationController
+  before_action :list_stocks, only: [:my_portfolio]
 
     def create
       stock = Stock.check_db(params[:ticker])
