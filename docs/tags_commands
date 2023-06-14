@@ -1,0 +1,13 @@
+git tag -a tracker_v2 Finance Tracker in Rails - v2.0: from https://j3-tracker-finance.herokuapp.com/ -m "Blog in Rails - v1.0:  from http://jungletronics.com" 
+                       -m "1- Create my_portifolio page for tracking stocks" 
+                       -m "2- Create links to navigation Bar : Brand & my portifolio" 
+                       -m "3- Add IEX-client gem - API Publishable Token from https://iexcloud.io/ " 
+                       -m "4- run: EDITOR='code --wait rails credentials:edit' command 👌️" 
+                       -m "5- Debugging Heroku log by running: 'heroku logs --tail' command"
+                       -m "6- Add Bootstrap table & Ruby Embedded Tags & @tracked-stocs @stocks vars" 
+                       -m "7- Links fixes - clean out our layout"                       
+                       -m "Thank you for downloading this project 😍️"            
+                       
+git tag -a tracker_v2  -m "J3 Finance Tracker in Rails - v2.0: from http://jungletronics.com" -m "Blog in Rails - v1.0:  from http://jungletronics.com" -m "1- Create my_portifolio page for tracking stocks" -m "2- Create links to navigation Bar : Brand & my portifolio" -m "3- Add IEX-client gem - API Publishable Token from https://iexcloud.io/ " -m "4- run: EDITOR='code --wait rails credentials:edit' command 👌️" -m "5- Debugging Heroku log by running: 'heroku logs --tail' command" -m "6- Add Bootstrap table & Ruby Embedded Tags & @tracked-stocs @stocks vars" -m "7- Links fixes - clean out our layout" -m "Thank you for downloading this project 😍️"                
+ 
+git push origin tracker_v2
