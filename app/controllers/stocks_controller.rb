@@ -14,18 +14,21 @@ class StocksController < ApplicationController
                 #     flash.now[:alert]= "Please enter a VALID Nasdaq Ticker symbol to search like: GOOG, AAPL, MSFT, AMZN, META, TSLA, NKE. Look for investopedia.com to learn more 😉️ Go to: https://www.investopedia.com/terms/s/stocksymbol.asp"
                 #     format.js { render partial: 'users/result', status: :unprocessable_entity }
                 # end  
-                flash[:alert]= "Please enter a VALID Nasdaq Ticker symbol to search like: GOOG, AAPL, MSFT, AMZN, META, TSLA, NKE."# Look for investopedia.com to learn more 😉️ Go to: https://www.investopedia.com/terms/s/stocksymbol.asp"                              
+                # Complete list: https://economia.awesomeapi.com.br/xml/available 
+                flash[:alert]= "Please enter a VALID currency quotation symbol to search like: USD-BRL, EUR-BRL, BTC-BRL, GBP-BRL, JPY-BRL, EUR-USD, RUB-USD, SAR-US. 👉️ https://economia.awesomeapi.com.br/xml/available"
+                # flash[:alert]= "Please enter a VALID Nasdaq Ticker symbol to search like: GOOG, AAPL, MSFT, AMZN, META, TSLA, NKE."# Look for investopedia.com to learn more 😉️ Go to: https://www.investopedia.com/terms/s/stocksymbol.asp"                              
                 # Rails.logger.info("#### Flash pass..api was call ####")
-                redirect_to my_portfolio_path
+                redirect_to my_portfolio_path, flash: { html_safe: true }
             end            
         else
             # respond_to do |format|
             #     flash.now[:alert]= "Please enter a Nasdaq TICKER symbol to search like: GOOG, AAPL, MSFT, AMZN, META, TSLA, NKE. Look for investopedia.com to learn more 😉️ Go to: https://www.investopedia.com/terms/s/stocksymbol.asp"
             #     format.js { render partial: 'users/result', status: :unprocessable_entity }
             # end
-            flash[:alert]= "Please enter a Nasdaq TICKER symbol to search like: GOOG, AAPL, MSFT, AMZN, META, TSLA, NKE."# Look for investopedia.com to learn more 😉️ Go to: https://www.investopedia.com/terms/s/stocksymbol.asp"
+            flash[:alert]= "Please enter a CURRENCY QUOTATION symbol to search like: USD-BRL, EUR-BRL, BTC-BRL, GBP-BRL, JPY-BRL, EUR-USD, RUB-USD, SAR-USD.  👉️ https://economia.awesomeapi.com.br/xml/available"
+            # flash[:alert]= "Please enter a Nasdaq TICKER symbol to search like: GOOG, AAPL, MSFT, AMZN, META, TSLA, NKE."# Look for investopedia.com to learn more 😉️ Go to: https://www.investopedia.com/terms/s/stocksymbol.asp"
             # Rails.logger.info("#### Flash pass..blank submitted:/ #### ")
-            redirect_to my_portfolio_path
+            redirect_to my_portfolio_path, flash: { html_safe: true }
         end
      end
 end
