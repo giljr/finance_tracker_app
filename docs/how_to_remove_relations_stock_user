@@ -1,0 +1,99 @@
+_list.html.erb:
+
+ <td><%= link_to "Remove", "#", data: { "turbo-method": "delete", "turbo-confirm": "Are you sure?" }, class: "btn btn-sm btn-primary"%> </td>
+
+console:
+
+irb(main):007:0> stock = user.stock.all
+/home/j3/.asdf/installs/ruby/3.0.2/lib/ruby/gems/3.0.0/gems/activemodel-7.0.4.3/lib/active_model/attribute_methods.rb:458:in `method_missing': undefined method `stock' for #<User id: 1, email: "giljr.2009@gmail.com", created_at: "2023-06-05 22:26:36.110033000 +0000", updated_at: "2023-06-05 23:21:43.517892000 +0000"> (NoMethodError)
+irb(main):010:0> user.stocks
+=> 
+[#<Stock:0x000055817fac5a20                                                
+  id: 7,                                                                   
+  ticker: "USD-BRL",                                                       
+  name: "Dólar Americano/Real Brasileiro",                                 
+  last_price: 0.48076e1,                                                   
+  created_at: Thu, 15 Jun 2023 20:23:03.602733000 UTC +00:00,
+  updated_at: Thu, 15 Jun 2023 20:23:03.602733000 UTC +00:00>,
+ #<Stock:0x000055817fbec6b0
+  id: 6,
+  ticker: "EUR-BRL",
+  name: "Euro/Real Brasileiro",
+  last_price: 0.52609e1,
+  created_at: Thu, 15 Jun 2023 19:54:02.490117000 UTC +00:00,
+  updated_at: Thu, 15 Jun 2023 19:54:02.490117000 UTC +00:00>,
+ #<Stock:0x000055817fbec5c0
+  id: 5,
+  ticker: "BTC-BRL",
+  name: "Bitcoin/Real Brasileiro",
+  last_price: 0.122521e6,
+  created_at: Thu, 15 Jun 2023 19:28:47.720978000 UTC +00:00,
+  updated_at: Thu, 15 Jun 2023 19:28:47.720978000 UTC +00:00>,
+ #<Stock:0x000055817fbec4d0
+  id: 8,
+  ticker: "LTC-BRL",
+  name: "Litecoin/Real Brasileiro",
+  last_price: 0.37129e3,
+  created_at: Fri, 16 Jun 2023 19:55:02.742106000 UTC +00:00,
+  updated_at: Fri, 16 Jun 2023 19:55:02.742106000 UTC +00:00>,
+ #<Stock:0x000055817fbec3e0
+  id: 9,
+  ticker: "JPY-BRL",
+  name: "Iene Japonês/Real Brasileiro",
+  last_price: 0.3398e-1,
+  created_at: Fri, 16 Jun 2023 20:15:17.223214000 UTC +00:00,
+  updated_at: Fri, 16 Jun 2023 20:15:17.223214000 UTC +00:00>,
+  updated_at: Fri, 16 Jun 2023 20:17:11.817419000 UTC +00:00>,
+ #<Stock:0x000055817fbe7ef8
+  id: 14,
+  ticker: "BRL-ARS",
+  name: "Real Brasileiro/Peso Argentino",
+  last_price: 0.517701e2,
+  created_at: Fri, 16 Jun 2023 20:18:00.052462000 UTC +00:00,
+  updated_at: Fri, 16 Jun 2023 20:18:00.052462000 UTC +00:00>]
+  Stock Load (0.1ms)  SELECT "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT ?  [["id", 12], ["LIMIT", 1]]                                                                        
+=>                                                                       
+#<Stock:0x000055817f995880                                               
+...  
+                                                                    
+irb(main):012:0> stock = UserStock.find(12)
+  UserStock Load (0.1ms)  SELECT "user_stocks".* FROM "user_stocks" WHERE "user_stocks"."id" = ? LIMIT ?  [["id", 12], ["LIMIT", 1]]                                                     
+=>                                                                       
+#<UserStock:0x000055817ef27420                                           
+...     
+                                                                 
+                
+irb(main):015:0> UserStock.where(user_id: user.id, stock_id:stock.id).first
+  UserStock Load (0.1ms)  SELECT "user_stocks".* FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? ORDER BY "user_stocks"."id" ASC LIMIT ?  [["user_id", 1], ["stock_id", 12], ["LIMIT", 1]]
+=> 
+#<UserStock:0x00007f75ec72daa8
+ id: 19,
+ user_id: 1,
+ stock_id: 12,
+ created_at: Fri, 16 Jun 2023 20:16:46.710992000 UTC +00:00,
+ updated_at: Fri, 16 Jun 2023 20:16:46.710992000 UTC +00:00>
+ 
+irb(main):016:0> UserStock.where(user_id: user.id, stock_id:stock.id).first.destroy
+  UserStock Load (0.1ms)  SELECT "user_stocks".* FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? ORDER BY "user_stocks"."id" ASC LIMIT ?  [["user_id", 1], ["stock_id", 12], ["LIMIT", 1]]
+  TRANSACTION (0.0ms)  begin transaction
+  UserStock Destroy (0.3ms)  DELETE FROM "user_stocks" WHERE "user_stocks"."id" = ?  [["id", 19]]
+  TRANSACTION (8.3ms)  commit transaction
+=> 
+#<UserStock:0x000055817ee7c4a8
+ id: 19,
+ user_id: 1,
+ stock_id: 12,
+ created_at: Fri, 16 Jun 2023 20:16:46.710992000 UTC +00:00,
+ updated_at: Fri, 16 Jun 2023 20:16:46.710992000 UTC +00:00>
+ 
+irb(main):017:0> UserStock.where(user_id: user.id, stock_id:stock.id).first.destroy
+
+summary: 
+
+stock = user.stock.all
+user.stocks
+stock = UserStock.find(12)
+UserStock.where(user_id: user.id, stock_id:stock.id).first
+UserStock.where(user_id: user.id, stock_id:stock.id).first.destroy
+
+
