@@ -1,0 +1,39 @@
+git push heroku master
+
+To https://git.heroku.com/j3-tracker-finance.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://git.heroku.com/j3-tracker-finance.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+git fetch --all --prune
+
+Fetching origin
+Fetching heroku
+
+git push --force heroku master:master
+
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (27/27), 6.42 KiB | 1.60 MiB/s, done.
+Total 27 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Updated 247 paths from d841d10
+remote: Compressing source files... done.
+...
+
+git status
+git add -A 
+git commit -m ":sparkles: feat: destroy stock"
+git push
+git push heroku master
+
+[error] 
+
+[SOLUTION]
+
+git fetch --all --prune
+git push --force heroku master:master
